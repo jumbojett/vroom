@@ -1,5 +1,4 @@
 <?php
-
 /*
     Plugin Name: VroomPlugin
     Plugin URI: http://mitre.org/
