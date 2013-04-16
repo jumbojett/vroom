@@ -1,6 +1,6 @@
 Vroom for Elgg
 ==================
-A simple way to speed up elgg. Vroom operates by flushing the output buffer before elgg shutdown begins. The browser is able to render results quickly to the user while additional shutdown functions continue on the server uninterrupted. Vroom can be used in conjunction with process intensive elgg internals such as notifications to create a more user-friendly atmosphere. 
+A simple way to speed up elgg. Vroom operates by flushing the output buffer before elgg shutdown begins. The browser is able to render results quickly to the user while additional shutdown functions continue on the server uninterrupted. Vroom can be used in conjunction with process intensive elgg internals such as *notifications* to create a more user-friendly atmosphere. 
 
 ## Features
  - Lighting fast elgg execution
@@ -10,7 +10,26 @@ A simple way to speed up elgg. Vroom operates by flushing the output buffer befo
 
 ## Developers
 
-### Converting code
+### Speed up elgg!
+Vroom can help you speed up your process intensive functions that don't render output to the browser. Converting old code is easy!
+
+#### Old
+```php
+$var1 = "hello";
+$var2 = "world";
+my_slow_notifications($var1,$var2);
+```
+#### New
+```php
+$var1 = "hello";
+$var2 = "world";
+
+elgg_register_event_handler('shutdown', 'system', 
+    function () use ($var1,$var2) {
+           my_slow_notifications($var1,$var2);
+    }
+, 500);
+```
 
 
 ### Shutdown state
