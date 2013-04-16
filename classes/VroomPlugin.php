@@ -34,7 +34,6 @@ class VroomPlugin
      */
     public function __construct()
     {
-
         // Initialize hooks
         elgg_register_event_handler('init', 'system', array($this, 'init'));
     }
@@ -44,7 +43,6 @@ class VroomPlugin
      */
     public function init()
     {
-
         /*
          * After elgg finishes an entire system execution, send the output to browser
          * This allows the other system shutdown processes to continue in the background while output gets returned to the user promptly
@@ -58,7 +56,6 @@ class VroomPlugin
      */
     public function flushToBrowser()
     {
-
         // Registering a shutdown flag allows other points in jettmail to determine if the state is in shutdown
         $GLOBALS['shutdown_flag'] = 1;
 
