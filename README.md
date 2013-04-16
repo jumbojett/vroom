@@ -11,7 +11,7 @@ A simple way to speed up elgg. Vroom operates by flushing the output buffer befo
 ## Developers
 
 ### Speed up elgg!
-Vroom can help you speed up your process intensive functions that don't render output to the browser. Converting old code is easy!
+Vroom can help you speed up your process intensive functions that aren't rendering output to the browser. Converting old code is easy!
 
 #### Old
 ```php
