@@ -7,7 +7,7 @@ A simple way to speed up elgg. Vroom operates by flushing the output buffer befo
 
 ## Server
  - Recommend PHP 5.3 or greater
- - Vroom has only been tested with Elgg v1.8.x but may work with older versions
+ - Vroom has only been tested with Elgg v1.8.3 and probably won't work with older versions due to the fact class auto-loading was recently introduced in elgg.
 
 ## Developers
 
