@@ -76,7 +76,7 @@ class VroomPlugin
     }
 
     /**
-     * Sifts through the headers to see a connection has been sent
+     * Sifts through the headers to see if a connection has been sent
      *
      * This is useful if a plugin wants to keep a connection alive
      * @return bool
