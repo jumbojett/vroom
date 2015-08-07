@@ -70,6 +70,12 @@ class VroomPlugin
             $size = ob_get_length();
             header("Content-Length: $size");
             ob_end_flush();
+
+            // allow vroom for fastcgi instances
+            if (is_callable('fastcgi_finish_request')) {
+                 fastcgi_finish_request();
+            }
+
             flush();
         }
 
